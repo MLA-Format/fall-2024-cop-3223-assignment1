@@ -10,4 +10,9 @@
   9-6-24: Discussed with Armin Delmo a confusion regarding the instructions for assignment 1
   about 5 minutes arount 10 Armin
 
-  
+  9-6-24: Copilot query: "expression must have integral type: (float/2)^2 error"
+    - Led to https://www.w3schools.com/c/c_ref_math.php
+
+    - 8:15 PM to 8:20 PM
+
+  9-6-24: 
