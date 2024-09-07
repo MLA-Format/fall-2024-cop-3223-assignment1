@@ -1,0 +1,13 @@
+* 9-1-24: https://www.w3schools.com/c
+    10:45 PM - 10:55 PM
+
+* 9-6-24: Google query on how to call a function in c
+    6:40 - 6:45 PM
+
+  9-6-24: Copilot query: "How to get return value from c function in c"
+    7:50 PM
+
+  9-6-24: Discussed with Armin Delmo a confusion regarding the instructions for assignment 1
+  about 5 minutes arount 10 Armin
+
+  
