@@ -31,7 +31,8 @@ double askForUserInput() {
 
 
 // calculateDiameter calculates the diameter of a circle
-// using two points.
+// using two points. The two points are gotten using the user's 
+// input from askForUserInput.
 double calculateDiameter(int x1, int y1, int x2, int y2) {
 
     return sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
@@ -40,6 +41,7 @@ double calculateDiameter(int x1, int y1, int x2, int y2) {
 
 
 // calculateDistance calculates the distance from one point to another.
+// The two points are gotten using the user's input from askForUserInput.
 double calculateDistance() {
 
     double x1 = askForUserInput();
@@ -60,7 +62,8 @@ double calculateDistance() {
 
 
 // calculatePerimeter calculates the perimeter of a circle that
-// has a diameter made of two points.
+// has a diameter made of two points. The two points
+// are gotten using the user's input from askForUserInput.
 double calculatePerimiter() {
 
     double x1 = askForUserInput();
@@ -81,7 +84,8 @@ double calculatePerimiter() {
 
 
 // calculateArea calculates the area of a circle
-// that has a diameter made of two points.
+// that has a diameter made of two points. The two points
+// are gotten using the user's input from askForUserInput.
 double calculateArea() {
 
     double x1 = askForUserInput();
@@ -101,7 +105,8 @@ double calculateArea() {
 
 
 // calculateWidth calculates the width of a circle with
-// a diameter made of two points.
+// a diameter made of two points. The two points
+// are gotten using the user's input from askForUserInput.
 double calculateWidth() {
     double x1 = askForUserInput();
     double y1 = askForUserInput();
@@ -120,7 +125,8 @@ double calculateWidth() {
 
 
 // calculateHeight calculates the height of a circle with
-// a diameter made of two points.
+// a diameter made of two points. The two points
+// are gotten using the user's input from askForUserInput.
 double calculateHeight() {
     double x1 = askForUserInput();
     double y1 = askForUserInput();
