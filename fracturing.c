@@ -3,13 +3,22 @@
 #include <stdio.h>
 #define PI 3.14159
 
+double askForUserInput() {
+    
+    int userInput = 0;
+
+    scanf("%i", &userInput);
+
+    return userInput;
+}
+
 double calculateDiameter(int x1, int y1, int x2, int y2) {
-    return sqrt(((x2-x1)^2)+(y2-y1)^2);
+    return sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
 }
 
 double calculateDistance() {
 
-    int x1 = 2;
+    int x1 = askForUserInput();
     int y1 = 2;
     printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
 
@@ -17,7 +26,7 @@ double calculateDistance() {
     int y2 = 2;
     printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
 
-    float diameter = sqrt(((x2-x1)^2)+(y2-y1)^2);
+    float diameter = calculateDiameter(x1, y1, x2, y2);
 
     printf("The distance between the two points is %f\n", diameter);
 
@@ -92,13 +101,8 @@ double calculateHeight() {
     return(1);
 }
 
-double askForUserInput() {
-    double val = 0.00;
-    scanf("%d", &val);
-
-    return val;
-}
-
 int main(int argc, char **argvcc) {
-    calculateArea();
+    calculateDistance();
+
+    return 0;
 } // End of main.
