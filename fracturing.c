@@ -1,106 +1,135 @@
+//********************************************************
+// fracturing.c
+// Author: Mason Alcock
+// Date: 9-8-2024
+// Class: COP3223C-0V06, Professor Parra
+// Purpose: This runs through a set of function that will calculate the diameter of a circle made
+// using two points, calculate the perimeter of a circle, calculate the area of a circle, and then
+// calculate the width and height of the circle.
+// Input: The first and second coordinate.
+// Output: To the command line, a summary of each point entered followed by the
+// value computed using the two points.
+//********************************************************
+
 // Imports.
 #include <math.h>
 #include <stdio.h>
 #define PI 3.14159
 
+// askForUserInput gets the user input and returns the user input
+// as a double.
 double askForUserInput() {
     
-    int userInput = 0;
+    double userInput = 0;
 
-    scanf("%i", &userInput);
+    scanf("%lf", &userInput);
 
     return userInput;
-}
+} // End of askForUserInput.
 
+// calculateDiameter calculates the diameter of a circle
+// using two points.
 double calculateDiameter(int x1, int y1, int x2, int y2) {
-    return sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
-}
 
+    return sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
+
+} // End of calculateDiameter.
+
+// calculateDistance calculates the distance from one point to another.
 double calculateDistance() {
 
-    int x1 = askForUserInput();
-    int y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
+    double x1 = askForUserInput();
+    double y1 = askForUserInput();
+    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
 
-    int x2 = askForUserInput();
-    int y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
+    double x2 = askForUserInput();
+    double y2 = askForUserInput();
+    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
 
     float diameter = calculateDiameter(x1, y1, x2, y2);
 
-    printf("The distance between the two points is %f\n", diameter);
+    printf("The distance between the two points is %lf\n", diameter);
 
     return(diameter);
 
-} 
+} // End of calculateDistance.
 
+// calculatePerimeter calculates the perimeter of a circle that
+// has a diameter made of two points.
 double calculatePerimiter() {
 
-    int x1 = askForUserInput();
-    int y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
+    double x1 = askForUserInput();
+    double y1 = askForUserInput();
+    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
 
-    int x2 = askForUserInput();
-    int y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
+    double x2 = askForUserInput();
+    double y2 = askForUserInput();
+    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
 
     float perimeter = calculateDiameter(x1, y1, x2, y2) * PI;
 
-    printf("The perimeter of the city encompassed by your request is %f", perimeter);
+    printf("The perimeter of the city encompassed by your request is %lf", perimeter);
 
     return(1);
 
-}
+} // End of calculatePerimeter.
 
+// calculateArea calculates the area of a circle
+// that has a diameter made of two points.
 double calculateArea() {
 
-    int x1 = askForUserInput();
-    int y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
+    double x1 = askForUserInput();
+    double y1 = askForUserInput();
+    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
 
-    int x2 = askForUserInput();
-    int y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
+    double x2 = askForUserInput();
+    double y2 = askForUserInput();
+    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
 
     float area = pow(calculateDiameter(x1, y1, x2, y2)/2, 2) * PI;
 
     printf("The area of the city encompassed by your request is %f", area);
 
     return(1);
-}
+} // End of calculateArea.
 
+// calculateWidth calculates the width of a circle with
+// a diameter made of two points.
 double calculateWidth() {
-    int x1 = askForUserInput();
-    int y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
+    double x1 = askForUserInput();
+    double y1 = askForUserInput();
+    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
 
-    int x2 = askForUserInput();
-    int y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
+    double x2 = askForUserInput();
+    double y2 = askForUserInput();
+    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
 
     double width = calculateDiameter(x1, y1, x2, y2);
 
     printf("The width of the city encompassed by your request is %d", width);
 
     return(1);
-}
+} // End of calculateWidth.
 
+// calculateHeight calculates the height of a circle with
+// a diameter made of two points.
 double calculateHeight() {
-    int x1 = askForUserInput();
-    int y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %i; y1= %i\n", x1, y1);
+    double x1 = askForUserInput();
+    double y1 = askForUserInput();
+    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
 
-    int x2 = askForUserInput();
-    int y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %i; y1= %i\n", x2, y2);
+    double x2 = askForUserInput();
+    double y2 = askForUserInput();
+    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
 
     double height = calculateDiameter(x1, y1, x2, y2);
 
-    printf("The height of the city encompassed by your request is %d", height);
+    printf("The height of the city encompassed by your request is %lf", height);
 
     return(1);
-}
+} // End of calculateHeight.
 
+// Main.
 int main(int argc, char **argvcc) {
     calculateDistance();
     calculatePerimiter();
