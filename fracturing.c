@@ -1,6 +1,6 @@
 //********************************************************
 // fracturing.c
-// Author: Mason Alcock
+// Author: Mason
 // Date: 9-8-2024
 // Class: COP3223C-0V06, Professor Parra
 // Purpose: This runs through a set of function that will calculate the diameter of a circle made
@@ -11,10 +11,12 @@
 // value computed using the two points.
 //********************************************************
 
+
 // Imports.
 #include <math.h>
 #include <stdio.h>
 #define PI 3.14159
+
 
 // askForUserInput gets the user input and returns the user input
 // as a double.
@@ -27,6 +29,7 @@ double askForUserInput() {
     return userInput;
 } // End of askForUserInput.
 
+
 // calculateDiameter calculates the diameter of a circle
 // using two points.
 double calculateDiameter(int x1, int y1, int x2, int y2) {
@@ -34,6 +37,7 @@ double calculateDiameter(int x1, int y1, int x2, int y2) {
     return sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
 
 } // End of calculateDiameter.
+
 
 // calculateDistance calculates the distance from one point to another.
 double calculateDistance() {
@@ -54,6 +58,7 @@ double calculateDistance() {
 
 } // End of calculateDistance.
 
+
 // calculatePerimeter calculates the perimeter of a circle that
 // has a diameter made of two points.
 double calculatePerimiter() {
@@ -68,11 +73,12 @@ double calculatePerimiter() {
 
     float perimeter = calculateDiameter(x1, y1, x2, y2) * PI;
 
-    printf("The perimeter of the city encompassed by your request is %lf", perimeter);
+    printf("The perimeter of the city encompassed by your request is %lf\n", perimeter);
 
     return(1);
 
 } // End of calculatePerimeter.
+
 
 // calculateArea calculates the area of a circle
 // that has a diameter made of two points.
@@ -88,10 +94,11 @@ double calculateArea() {
 
     float area = pow(calculateDiameter(x1, y1, x2, y2)/2, 2) * PI;
 
-    printf("The area of the city encompassed by your request is %f", area);
+    printf("The area of the city encompassed by your request is %f\n", area);
 
     return(1);
 } // End of calculateArea.
+
 
 // calculateWidth calculates the width of a circle with
 // a diameter made of two points.
@@ -106,10 +113,11 @@ double calculateWidth() {
 
     double width = calculateDiameter(x1, y1, x2, y2);
 
-    printf("The width of the city encompassed by your request is %d", width);
+    printf("The width of the city encompassed by your request is %lf\n", width);
 
     return(1);
 } // End of calculateWidth.
+
 
 // calculateHeight calculates the height of a circle with
 // a diameter made of two points.
@@ -124,10 +132,11 @@ double calculateHeight() {
 
     double height = calculateDiameter(x1, y1, x2, y2);
 
-    printf("The height of the city encompassed by your request is %lf", height);
+    printf("The height of the city encompassed by your request is %lf\n", height);
 
     return(1);
 } // End of calculateHeight.
+
 
 // Main.
 int main(int argc, char **argvcc) {
