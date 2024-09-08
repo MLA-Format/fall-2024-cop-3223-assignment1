@@ -145,6 +145,7 @@ double calculateHeight() {
 
 
 // Main.
+// Main will call the other functions within fracturing.c
 int main(int argc, char **argvcc) {
     calculateDistance();
     calculatePerimiter();
