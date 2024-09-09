@@ -1,6 +1,6 @@
 //********************************************************
 // fracturing.c
-// Author: Mason Alcock
+// Author: Mason Alcock, 5621067
 // Date: 9-8-2024
 // Class: COP3223C-0V06, Professor Parra
 // Purpose: This runs through a set of function that will calculate the diameter of a circle made
@@ -46,11 +46,11 @@ double calculateDistance() {
 
     double x1 = askForUserInput();
     double y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
+    printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
 
     double x2 = askForUserInput();
     double y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
+    printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
     float diameter = calculateDiameter(x1, y1, x2, y2);
 
@@ -68,11 +68,11 @@ double calculatePerimiter() {
 
     double x1 = askForUserInput();
     double y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
+    printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
 
     double x2 = askForUserInput();
     double y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
+    printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
     float perimeter = calculateDiameter(x1, y1, x2, y2) * PI;
 
@@ -90,17 +90,18 @@ double calculateArea() {
 
     double x1 = askForUserInput();
     double y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
+    printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
 
     double x2 = askForUserInput();
     double y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
+    printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
     float area = pow(calculateDiameter(x1, y1, x2, y2)/2, 2) * PI;
 
     printf("The area of the city encompassed by your request is %f\n", area);
 
     return(1);
+
 } // End of calculateArea.
 
 
@@ -108,19 +109,21 @@ double calculateArea() {
 // a diameter made of two points. The two points
 // are gotten using the user's input from askForUserInput.
 double calculateWidth() {
+
     double x1 = askForUserInput();
     double y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
+    printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
 
     double x2 = askForUserInput();
     double y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
+    printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
     double width = calculateDiameter(x1, y1, x2, y2);
 
     printf("The width of the city encompassed by your request is %lf\n", width);
 
     return(1);
+
 } // End of calculateWidth.
 
 
@@ -128,25 +131,28 @@ double calculateWidth() {
 // a diameter made of two points. The two points
 // are gotten using the user's input from askForUserInput.
 double calculateHeight() {
+
     double x1 = askForUserInput();
     double y1 = askForUserInput();
-    printf("Point #1 entered: x1 = %lf; y1= %lf\n", x1, y1);
+    printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
 
     double x2 = askForUserInput();
     double y2 = askForUserInput();
-    printf("Point #2 entered: x1 = %lf; y1= %lf\n", x2, y2);
+    printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
     double height = calculateDiameter(x1, y1, x2, y2);
 
     printf("The height of the city encompassed by your request is %lf\n", height);
 
     return(1);
+
 } // End of calculateHeight.
 
 
 // Main.
 // Main will call the other functions within fracturing.c
 int main(int argc, char **argvcc) {
+
     calculateDistance();
     calculatePerimiter();
     calculateArea();
@@ -154,4 +160,5 @@ int main(int argc, char **argvcc) {
     calculateHeight();
 
     return 0;
+
 } // End of main.
