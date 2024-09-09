@@ -1,6 +1,6 @@
 //********************************************************
 // fracturing.c
-// Author: Mason
+// Author: Mason Alcock
 // Date: 9-8-2024
 // Class: COP3223C-0V06, Professor Parra
 // Purpose: This runs through a set of function that will calculate the diameter of a circle made
